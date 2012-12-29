@@ -1,0 +1,199 @@
+//
+//  cache.cpp
+//  HW6
+//
+//  Created by Ibrahim Saeed on 12/11/12.
+//  Copyright (c) 2012 Ibrahim Saeed. All rights reserved.
+//
+
+
+#include <string>
+#include <cstdlib>
+#include <iostream>
+#include "cache.h"
+
+
+
+using namespace std;
+
+
+
+//In this .cpp file there are functions defining the cacheline ADT. 
+
+cacheline::cacheline(){
+    
+    validity = false;
+    LRU_tag = 0;
+    LRU_tag_4 = 0;
+}
+
+
+
+
+
+void cacheline::set_tag(string n){
+    
+    
+    tag = n;
+    
+    
+    
+}
+
+
+
+void cacheline::set_tag_2(string n){
+    
+    
+    tag_2 = n;
+    
+    
+    
+}
+
+
+void cacheline::set_tag_3(string n){
+    
+    
+    tag_3 = n;
+    
+    
+    
+}
+
+
+
+void cacheline::set_tag_4(string n){
+    
+    
+    tag_4 = n;
+    
+    
+    
+}
+
+
+
+void cacheline::set_validity(bool y){
+    
+    validity = y;
+    
+}
+
+
+
+void cacheline::set_index(string n) {
+    
+    index = n;
+        
+}
+
+void cacheline::set_LRU_tag(int n){
+    
+    
+    LRU_tag = n;
+    
+}
+
+
+
+void cacheline::set_LRU_tag_2(int n){
+    
+    
+    LRU_tag_2 = n;
+    
+}
+
+
+void cacheline::set_LRU_tag_3(int n){
+    
+    
+    LRU_tag_3 = n;
+    
+}
+
+
+void cacheline::set_LRU_tag_4(int n){
+    
+    
+    LRU_tag_4 = n;
+    
+
+}
+
+int cacheline::Get_LRU_tag() const{
+    
+    return LRU_tag;
+}
+
+
+
+
+
+int cacheline::Get_LRU_tag_2() const{
+    
+    return LRU_tag_2;
+}
+
+
+
+int cacheline::Get_LRU_tag_3() const{
+    
+    return LRU_tag_3;
+}
+
+
+
+
+int cacheline::Get_LRU_tag_4() const{
+    
+    return LRU_tag_4;
+}
+
+
+
+
+string cacheline::Get_tag() const{
+    
+    
+    return tag; 
+}
+
+
+string cacheline::Get_tag_2() const{
+    
+    
+    return tag_2;
+}
+
+
+string cacheline::Get_tag_3() const{
+    
+    
+    return tag_3;
+}
+
+string cacheline::Get_tag_4() const{
+    
+    
+    return tag_4;
+}
+
+
+
+
+string cacheline::Get_index() const {
+    
+    
+    return index;
+    
+}
+
+
+
+
+bool cacheline::Is_valid() const{
+    
+    
+    return validity;
+}
